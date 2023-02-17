@@ -15,26 +15,29 @@ export default {
     },
   },
   metaInfo: {
-    title: "About test",
     meta: [
-      { name: "description", content: "This is about testing about page" },
-      { property: "og:title", content: "About test" },
-      { property: "og:site_name", content: "godswilltest" },
       {
-        property: "og:description",
+        vmid: "description",
+        name: "description",
         content: "This is about testing about page",
       },
-      { property: "og:type", content: "profile" },
-      {
-        property: "og:url",
-        content: window.location.href,
-      },
-      {
-        property: "og:image",
-        content:
-          "https://storage.googleapis.com/cryptofundme_dev_bucket/cryptofundme_media/creators/8/campaign_images/image_1_16647442114.jpg"
-      },
+      // { property: "og:title", content: "About" },
+      // { property: "og:site_name", content: "godswilltest" },
+      // {
+      //   property: "og:description",
+      //   content: "This is about testing about page"
+      // },
+      // { property: "og:type", content: "website" },
+      // {
+      //   property: "og:url",
+      //   content: "https://godswilltest.netlify.app/about",
+      // },
+      // {
+      //   property: "og:image",
+      //   content:
+      //     "https://storage.googleapis.com/cryptofundme_dev_bucket/cryptofundme_media/creators/8/campaign_images/image_1_16647442114.jpg",
+      // },
     ],
-  }
+  },
 };
 </script>

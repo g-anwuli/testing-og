@@ -9,9 +9,10 @@
 export default {
   name: "App",
   metaInfo: {
-    title: "Landing testing",
+    title: "Landing",
+    titleTemplate: '%s - testing',
     meta: [
-      { name: "description", content: "This is about testing" },
+      { vmid:"description", name: "description", content: "This is about testing" },
       { property: "og:title", content: "Landing test" },
       { property: "og:site_name", content: "godswilltest" },
       { property: "og:type", content: "website" }
