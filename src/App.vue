@@ -9,9 +9,14 @@
 export default {
   name: "App",
   metaInfo: {
-    title: "Testing og",
-    titleTemplate: "%s | My Awesome Testing"
-  },
+    title: "Landing testing",
+    meta: [
+      { name: "description", content: "This is about testing" },
+      { property: "og:title", content: "Landing test" },
+      { property: "og:site_name", content: "godswilltest" },
+      { property: "og:type", content: "website" }
+    ],
+  }
 };
 </script>
 <style>
