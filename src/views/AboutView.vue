@@ -15,6 +15,7 @@ export default {
     },
   },
   metaInfo: {
+    title:"About ",
     meta: [
       {
         vmid: "description",
