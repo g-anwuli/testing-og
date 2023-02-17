@@ -7,13 +7,7 @@
 </template>
 <script>
 export default {
-  name: "App",
-  metaInfo(){
-    return {
-    title: "Landing",
-    titleTemplate: '%s - testing'
-  }
-  }
+  name: "App"
 };
 </script>
 <style>
