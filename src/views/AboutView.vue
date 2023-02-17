@@ -15,7 +15,7 @@ export default {
     },
   },
   metaInfo: {
-    title:"About ",
+    title:"About",
     meta: [
       {
         vmid: "description",
@@ -29,10 +29,10 @@ export default {
       //   content: "This is about testing about page"
       // },
       // { property: "og:type", content: "website" },
-      // {
-      //   property: "og:url",
-      //   content: "https://godswilltest.netlify.app/about",
-      // },
+      {
+        property: "og:url",
+        content: "https://godswilltest.netlify.app/about",
+      },
       // {
       //   property: "og:image",
       //   content:
