@@ -27,7 +27,7 @@ export default {
       { property: "og:type", content: "profile" },
       {
         property: "og:url",
-        content: this.pageLink(),
+        content: window.location.href,
       },
       {
         property: "og:image",
