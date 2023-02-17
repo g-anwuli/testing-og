@@ -21,6 +21,14 @@ const routes = [
           property: "og:title",
           content: "Home Page",
         },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:url",
+          content: "https://godswilltest.netlify.app",
+        },
       ],
     },
   },
@@ -46,6 +54,14 @@ const routes = [
         {
           property: "og:title",
           content: "About Page",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:url",
+          content: "https://godswilltest.netlify.app/about",
         },
         // {
         //   property: "og:image",
