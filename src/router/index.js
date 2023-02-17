@@ -47,11 +47,11 @@ const routes = [
           property: "og:title",
           content: "About Page",
         },
-        {
-          property: "og:image",
-          content:
-            "https://storage.googleapis.com/cryptofundme_dev_bucket/cryptofundme_media/creators/8/campaign_images/image_1_16647442114.jpg",
-        },
+        // {
+        //   property: "og:image",
+        //   content:
+        //     "https://storage.googleapis.com/cryptofundme_dev_bucket/cryptofundme_media/creators/8/campaign_images/image_1_16647442114.jpg",
+        // },
       ],
     },
   },
@@ -81,9 +81,9 @@ router.beforeEach((to, from, next) => {
     .slice()
     .reverse()
     .find((r) => r.meta && r.meta.metaTags);
-  console.log(nearestWithMeta);
-  console.log(nearestWithTitle);
-  console.log("previus meta",previousNearestWithMeta);
+  // console.log(nearestWithMeta);
+  // console.log(nearestWithTitle);
+  // console.log("previus meta",previousNearestWithMeta);
   // If a route with a title was found, set the document (page) title to that value.
   if (nearestWithTitle) {
     document.title = nearestWithTitle.meta.title;
