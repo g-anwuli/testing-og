@@ -61,7 +61,7 @@ const routes = [
         },
         {
           property: "og:url",
-          content: window.location.href,
+          content: window.location.href
         },
       ],
     },
