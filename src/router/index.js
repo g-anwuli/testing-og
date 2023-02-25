@@ -33,7 +33,7 @@ const routes = [
     },
   },
   {
-    path: "/about",
+    path: "/about/:id/:title",
     name: "about",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -60,6 +60,10 @@ const routes = [
           content: "website",
         },
         {
+          property: "og:image",
+          content: "",
+        },
+        {
           property: "og:url",
           content: "https://godswilltest.netlify.app",
         },
@@ -73,7 +77,8 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to,from, next) => {
+  const {id,title} = to.params
   const nearestWithTitle = to.matched
     .slice()
     .reverse()
@@ -83,21 +88,26 @@ router.beforeEach((to, from, next) => {
     .slice()
     .reverse()
     .find((r) => r.meta && r.meta.metaTags);
-
-  const previousNearestWithMeta = from.matched
-    .slice()
-    .reverse()
-    .find((r) => r.meta && r.meta.metaTags);
-
-  if (nearestWithTitle) {
+  
+  if (nearestWithTitle && !title) {
     document.title = nearestWithTitle.meta.title;
-  } else if (previousNearestWithMeta) {
-    document.title = previousNearestWithMeta.meta.title;
+  } else if (title) {
+    document.title = to.params.title;
   }
 
   Array.from(document.querySelectorAll("[data-vue-router-controlled]")).map(
     (el) => el.parentNode.removeChild(el)
   );
+
+  const fav = document.createElement("link");
+  fav.setAttribute("rel", "icon");
+  if (id) {
+    fav.setAttribute("href", `https://robohash.org/${id}?set=set2&size=20x20`);
+  }else{
+    fav.setAttribute("href", "/favicon.ico");
+  }
+  fav.setAttribute("data-vue-router-controlled", "");
+  document.head.appendChild(fav);
 
   if (!nearestWithMeta) return next();
 
@@ -106,6 +116,14 @@ router.beforeEach((to, from, next) => {
       const tag = document.createElement("meta");
 
       Object.keys(tagDef).forEach((key) => {
+        if (key ==="content" && tagDef.property === "og:title" && title) {
+          tag.setAttribute(key, title);
+          return
+        }
+        if (key ==="content" && tagDef.property === "og:image" && nearestWithMeta.name === "about") {
+          tag.setAttribute(key, `https://robohash.org/${id}?set=set2&size=180x180`);
+          return
+        }
         tag.setAttribute(key, tagDef[key]);
       });
 
