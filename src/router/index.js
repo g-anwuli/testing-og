@@ -99,16 +99,6 @@ router.beforeEach((to,from, next) => {
     (el) => el.parentNode.removeChild(el)
   );
 
-  const fav = document.createElement("link");
-  fav.setAttribute("rel", "icon");
-  if (id) {
-    fav.setAttribute("href", `https://robohash.org/${id}?set=set2&size=20x20`);
-  }else{
-    fav.setAttribute("href", "/favicon.ico");
-  }
-  fav.setAttribute("data-vue-router-controlled", "");
-  document.head.appendChild(fav);
-
   if (!nearestWithMeta) return next();
 
   nearestWithMeta.meta.metaTags
