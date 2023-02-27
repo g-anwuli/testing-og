@@ -27,7 +27,7 @@ const routes = [
         },
         {
           property: "og:url",
-          content: "https://godswilltest.netlify.app",
+          content: "https://testing-og-2.netlify.app",
         },
       ],
     },
@@ -65,7 +65,7 @@ const routes = [
         },
         {
           property: "og:url",
-          content: window.location.href,
+          content: "https://testing-og-2.netlify.app",
         },
       ],
     },
