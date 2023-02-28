@@ -45,11 +45,11 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The About of testing og",
+          content: "The About of testing og page, seeing if it working",
         },
         {
           property: "og:description",
-          content: "The About of testing og",
+          content: "The About of testing og page, seeing if it working",
         },
         {
           property: "og:title",
@@ -111,7 +111,7 @@ router.beforeEach((to,from, next) => {
           return
         }
         if (key ==="content" && tagDef.property === "og:image" && nearestWithMeta.name === "about") {
-          tag.setAttribute(key, `https://robohash.org/${id}?set=set2&size="270x270`);
+          tag.setAttribute(key, `https://robohash.org/${id}?set=set2&size="500x500`);
           return
         }
         tag.setAttribute(key, tagDef[key]);

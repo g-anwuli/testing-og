@@ -1,0 +1,98 @@
+
+Start a cyptofundme
+FUNCTION
+
+In campaign details process:
+
+show category error when none is choosen 
+is a user allow to create two or more campaign with identical details, atleast not while the campaign is still active or pending
+(This is backend)
+
+It should throw a more readable alert when the link is invalid.
+or the submit function shouldn't fire at all?
+
+can't seem to go back from start a cryptofundme page, campaign details page, using the phone back icon but the arrow at the navbar works 
+
+after the campaign has been created the next page where you can view campaign
+there should be a way to go back to home on mobile.
+
+UI
+campaign details:
+category select element background sholud be transparent(might be due to phone ui difference)
+
+when not connected, the connect wallet backdrop doesnt cover the navbar
+cant seem to create campaign on mobile it showing network error.
+
+on choosing the second image only it still throw the error PLEASE SELECT ONE IMAGE since banner image is the neccesary one the error should include banner image not one image
+
+
+
+
+Fundraiser Page
+UI 
+placeholder for image while till loading
+also lazy loading can be applied for faster loading of the page.
+
+
+
+
+Details Page
+UI
+video should cover the whole space, if not maybe a background matching youtube background like black or any other color to leaving no white space under
+
+placeholder for image in the slider while it still loading
+
+if possible can video stop playing , after swiping to another image on the slide?
+
+Share modal position,The share modal position on tab screen > 768px the modal seem to be far down
+
+Donation list , Everything is overflow scroll , shouldnt it just be the list and vertical?
+
+Doesnt show the coin donated on the donation list and word of encouragement
+
+
+
+
+Donation Page
+UI
+Donation modal should scroll up on overflow, so user can scroll to find cancel icon or the icon should be in the box ?
+
+Donation modal heading between 768px and 1024px scattered
+
+function
+length limitation of donor name
+
+can there be a minimum value that can be donated because someone cant just put fractions of cent like $0.001 
+
+spacing top and bottom so users with medium creen height can scroll to see the cancel icon
+
+from 360px below donation modal content scatters
+
+
+
+
+Appreciation Page
+UI
+Appreciation comment input should be textearea should the text can flex down
+long figures should be abbreviated or truncate or rounded.
+
+FUNCTION
+user should be able to return to add comment after viewing receipt
+
+
+
+
+HomePage 
+UI
+Placeholder for stat on homepage to prevent jumping of content. eg 0 until the figures are fetched
+
+Default template when there is no campaign in a particular campaign like what we have in fundraiser
+
+Top and recent Donation are not showing 
+abrreviation for long time in top and recent donation list.
+
+Tab to mobile 
+the first section there seem to be an issue with the height causing the content to go beyond the screen height, it also seem to be set to overflow hidden.
+
+onMobile the account dropdown in the sidebar Doesnt close on clicking outside
+when you navigate to profile or campaign using the dropdown if you navigate back to home using the arrow icon the side bar and the dropDown still show
