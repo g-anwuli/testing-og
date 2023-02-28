@@ -111,7 +111,7 @@ router.beforeEach((to,from, next) => {
           return
         }
         if (key ==="content" && tagDef.property === "og:image" && nearestWithMeta.name === "about") {
-          tag.setAttribute(key, `https://robohash.org/${id}?set=set2&size=180x180`);
+          tag.setAttribute(key, `https://robohash.org/${id}?set=set2&size="270x270`);
           return
         }
         tag.setAttribute(key, tagDef[key]);
