@@ -20,18 +20,15 @@ My Campaign Page
 
 function fix
 Matic no part of the Donation Stat
+(This is done)
 
 Ui fix
 Not showing Expired campaign on mobile
+(This is done)
 
 green cylinder stat at the bottom not scalable for large numbers
 (Waiting for endie redesign or opnion)
 
-
-
-
-Edit Page
-No fix
 
 
 
@@ -40,17 +37,25 @@ Transactional Page
 
 FUNCTION
 Transaction hash not showing for matic
-it seem to be showing pending for a withdrawal that failed. i checked it on the explorer. (This is backend)
+(This is done)
+it seem to be showing pending for a withdrawal that failed. i checked it on the explorer. 
+(This is done)
 
 UI
 table content squized before transitioning into mobile view
-transaction modal between 768px to 1024px on average height the scroll mechanism not that good. cant scroll to the cancel button
+(This is done)
 
-on mobile content overflowing when one of the field is to long 
+transaction modal between 768px to 1024px on average height the scroll mechanism not that good. cant scroll to the cancel button
+(This is done)
+
+on mobile content overflowing when one of the field is to long
+(Text will be reduced) 
 
 cant the close icon be position better ?
+(This is done)
 
 Donation seem to have a different alignment than withdraw transactions on mobile
+(This is done)
 
 
 
@@ -71,9 +76,10 @@ after throwing error alert should the modal not close?
  
 UI
 table content squized before transitioning into mobile view
-transaction modal between 768px to 1024px on average height the scroll mechanism not that good. cant scroll to the cancel button
+(To think of something)
 
-on desktop sucess modal image reduces with screen size enlarges, it should stop resizing at the largest container size
+transaction modal between 768px to 1024px on average height the scroll mechanism not that good. cant scroll to the cancel button
+(This is done)
 
 
 
@@ -81,6 +87,7 @@ on desktop sucess modal image reduces with screen size enlarges, it should stop 
 Search Page
 UI
 alignment like fundraiser container
+(This is to be retouched)
 
 
 
@@ -89,28 +96,36 @@ Start a cyptofundme
 FUNCTION
 In personal details processs:
 no name, no country , it process instead of an error message
+(This is done)
 
 In campaign details process:
 
-show category error when none is choosen 
+show category error when none is choosen
+(This is done)
+
 is a user allow to create two or more campaign with identical details, atleast not while the campaign is still active or pending
+(This is done)
 
 It should throw a more readable alert when the link is invalid.
-or the submit function shouldn't fire at all?
+(This is done)
+
 
 can't seem to go back from start a cryptofundme page, campaign details page, using the phone back icon but the arrow at the navbar works 
+(This is done)
 
-after the campaign has been created the next page where you can view campaign
-there should be a way to go back to home on mobile.
 
 UI
 campaign details:
-category select element background sholud be transparent(might be due to phone ui difference)
+
+category select element background should be transparent
+(might be due to phone ui difference)
 
 when not connected, the connect wallet backdrop doesnt cover the navbar
 cant seem to create campaign on mobile it showing network error.
+(No more doing this)
 
 on choosing the second image only it still throw the error PLEASE SELECT ONE IMAGE since banner image is the neccesary one the error should include banner image not one image
+(Not done)
 
 
 
@@ -119,6 +134,7 @@ Fundraiser Page
 UI 
 placeholder for image while till loading
 also lazy loading can be applied for faster loading of the page.
+(To get back to)
 
 
 
@@ -155,16 +171,20 @@ spacing top and bottom so users with medium creen height can scroll to see the c
 
 from 360px below donation modal content scatters
 
+limitation of comment after donation
 
+Donor email length dhould not be limited.
 
 
 Appreciation Page
 UI
 Appreciation comment input should be textearea should the text can flex down
+
 long figures should be abbreviated or truncate or rounded.
 
 FUNCTION
 user should be able to return to add comment after viewing receipt
+(This is done)
 
 
 
@@ -172,17 +192,22 @@ user should be able to return to add comment after viewing receipt
 HomePage 
 UI
 Placeholder for stat on homepage to prevent jumping of content. eg 0 until the figures are fetched
+(This has been done)
 
 Default template when there is no campaign in a particular campaign like what we have in fundraiser
+(This is done)
 
 Top and recent Donation are not showing 
 abrreviation for long time in top and recent donation list.
+(this is done)
 
 Tab to mobile 
 the first section there seem to be an issue with the height causing the content to go beyond the screen height, it also seem to be set to overflow hidden.
+(This is done)
 
 onMobile the account dropdown in the sidebar Doesnt close on clicking outside
 when you navigate to profile or campaign using the dropdown if you navigate back to home using the arrow icon the side bar and the dropDown still show
 
+(This is yet to be fix)
 
 remind Goerge to send endie the screenshot.

@@ -1,0 +1,9 @@
+
+
+
+
+HomePage 
+onMobile the account dropdown in the sidebar Doesnt close on closing the sidebar
+
+when you navigate to profile or campaign using the dropdown if you navigate back to home using the arrow icon the side bar and the dropDown still show
+( This is yet to be fix )

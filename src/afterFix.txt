@@ -1,0 +1,111 @@
+modals shouldnt be sliding when the screen size contain all the content of the modal
+(This is more a suggestion to Mr George)
+
+since details page has a new heading the padding the container seems off
+(This is more a suggestion to Mr George)
+
+
+
+cfm Page
+UI
+"Thanks for subscribing" text after email validated and submitted
+(This is backend)
+
+
+
+Campaign Page
+
+green cylinder stat at the bottom not scalable for large numbers
+(Waiting for endie redesign or opnion)
+
+Transactional Page
+
+on mobile modal content overflowing when one of the field is to long
+(Text will be reduced) 
+
+
+
+
+Withdrawal Page
+
+FUNCTION
+Balance, withdrawable balance and fee flow to be discuss between senior devs
+
+optional a functionality for use to just choose all their withdrawable balance instead of typing it e.g (Max) (optional)
+(This is pending)
+ 
+UI
+table content squized before transitioning into mobile view
+(To think of something)
+
+
+
+
+
+Search Page
+UI
+alignment like fundraiser container
+(This is to be retouched)
+
+
+
+
+Start a cyptofundme
+UI
+campaign details:
+
+category select element background should be transparent
+(might be due to phone ui difference)
+
+on choosing the second image only it still throw the error PLEASE SELECT ONE IMAGE since banner image is the neccesary one the error should include banner image not one image
+(Not done)
+
+selected image should be cancelable, so user can remove images not only replace them with another one.
+(this is done)
+
+
+
+
+Fundraiser Page
+UI 
+placeholder for image while till loading
+also lazy loading can be applied for faster loading of the page.
+(To get back to)
+
+home fundraiser showing too much campaign, it was about six max before. 
+(This is done)
+
+
+
+
+Details Page
+UI
+placeholder for image in the slider while it still loading
+
+
+Edit Campaign Page
+all the limitation and flow of start a cryptofundme page should apply to edit page. because they are identical.
+
+
+
+
+Donation Page
+
+function
+can there be a minimum value that can be donated because someone cant just put fractions of cent like $0.001 
+
+limitation of comment after donation
+
+Donor email length dhould not be limited.
+
+
+
+
+
+HomePage 
+
+UI
+onMobile the account dropdown in the sidebar Doesnt close on closing the sidebar
+
+when you navigate to profile or campaign using the dropdown if you navigate back to home using the arrow icon the side bar and the dropDown still show
+( This is yet to be fix )
