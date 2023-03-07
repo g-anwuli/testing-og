@@ -5,7 +5,6 @@
       >To whatsapp</ShareNetwork
     >
   </div>
-  <head v-html="$options.head()"></head>
 </template>
 <script>
 export default {
@@ -14,34 +13,6 @@ export default {
     pageLink() {
       return window.location.href;
     },
-  },
-  data() {
-    return {
-      title: 'My Page Title',
-      description: 'This is a description of my page',
-      imageUrl: '../assets/logo.png'
-    }
-  },
-  head() {
-    return {
-      title: {
-        inner: this.title
-      },
-      meta: [
-        {
-          property: 'og:title',
-          content: this.title
-        },
-        {
-          property: 'og:description',
-          content: this.description
-        },
-        {
-          property: 'og:image',
-          content: this.imageUrl
-        }
-      ]
-    }
   }
-}
+};
 </script>

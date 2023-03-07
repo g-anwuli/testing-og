@@ -59,10 +59,10 @@ const routes = [
           property: "og:type",
           content: "website",
         },
-        // {
-        //   property: "og:image",
-        //   content: "",
-        // },
+        {
+          property: "og:image",
+          content: "",
+        },
         {
           property: "og:url",
           content: "https://testing-og-2.netlify.app",
@@ -77,59 +77,59 @@ const router = createRouter({
   routes,
 });
 
-// router.beforeEach((to, from, next) => {
-//   const { id, title } = to.params;
-//   const nearestWithTitle = to.matched
-//     .slice()
-//     .reverse()
-//     .find((r) => r.meta && r.meta.title);
+router.beforeEach((to, from, next) => {
+  const { id, title } = to.params;
+  const nearestWithTitle = to.matched
+    .slice()
+    .reverse()
+    .find((r) => r.meta && r.meta.title);
 
-//   const nearestWithMeta = to.matched
-//     .slice()
-//     .reverse()
-//     .find((r) => r.meta && r.meta.metaTags);
+  const nearestWithMeta = to.matched
+    .slice()
+    .reverse()
+    .find((r) => r.meta && r.meta.metaTags);
 
-//   if (nearestWithTitle && !title) {
-//     document.title = nearestWithTitle.meta.title;
-//   } else if (title) {
-//     document.title = to.params.title;
-//   }
+  if (nearestWithTitle && !title) {
+    document.title = nearestWithTitle.meta.title;
+  } else if (title) {
+    document.title = to.params.title;
+  }
 
-//   Array.from(document.querySelectorAll("[data-vue-router-controlled]")).map(
-//     (el) => el.parentNode.removeChild(el)
-//   );
+  Array.from(document.querySelectorAll("[data-vue-router-controlled]")).map(
+    (el) => el.parentNode.removeChild(el)
+  );
 
-//   if (!nearestWithMeta) return next();
+  if (!nearestWithMeta) return next();
 
-//   nearestWithMeta.meta.metaTags
-//     .map((tagDef) => {
-//       const tag = document.createElement("meta");
+  nearestWithMeta.meta.metaTags
+    .map((tagDef) => {
+      const tag = document.createElement("meta");
 
-//       Object.keys(tagDef).forEach((key) => {
-//         // if (key === "content" && tagDef.property === "og:title" && title) {
-//         //   tag.setAttribute(key, title);
-//         //   return;
-//         // }
-//         // if (
-//         //   key === "content" &&
-//         //   tagDef.property === "og:image" &&
-//         //   nearestWithMeta.name === "about"
-//         // ) {
-//         //   tag.setAttribute(
-//         //     key,
-//         //     `https://robohash.org/${id}?set=set2&size=500x500`
-//         //   );
-//         //   return;
-//         // }
-//         tag.setAttribute(key, tagDef[key]);
-//       });
+      Object.keys(tagDef).forEach((key) => {
+        if (key === "content" && tagDef.property === "og:title" && title) {
+          tag.setAttribute(key, title);
+          return;
+        }
+        if (
+          key === "content" &&
+          tagDef.property === "og:image" &&
+          nearestWithMeta.name === "about"
+        ) {
+          tag.setAttribute(
+            key,
+            `https://robohash.org/${id}?set=set2&size=500x500`
+          );
+          return;
+        }
+        tag.setAttribute(key, tagDef[key]);
+      });
 
-//       tag.setAttribute("data-vue-router-controlled", "");
-//       return tag;
-//     })
-//     .forEach((tag) => document.head.appendChild(tag));
+      tag.setAttribute("data-vue-router-controlled", "");
+      return tag;
+    })
+    .forEach((tag) => document.head.appendChild(tag));
 
-//   next();
-// });
+  next();
+});
 
 export default router;
