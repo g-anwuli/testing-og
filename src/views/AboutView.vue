@@ -5,6 +5,7 @@
       >To whatsapp</ShareNetwork
     >
   </div>
+  <head v-html="$options.head()"></head>
 </template>
 <script>
 export default {
@@ -14,18 +15,33 @@ export default {
       return window.location.href;
     },
   },
-  created() {
-    const tag = document.createElement("meta");
-    tag.setAttribute(
-      "property",
-      "og:image"
-    );
-    tag.setAttribute(
-      "content",
-      `../assets/logo.png`
-    );
-    tag.setAttribute("data-vue-router-controlled", "");
-    document.head.appendChild(tag)
+  data() {
+    return {
+      title: 'My Page Title',
+      description: 'This is a description of my page',
+      imageUrl: '../assets/logo.png'
+    }
   },
-};
+  head() {
+    return {
+      title: {
+        inner: this.title
+      },
+      meta: [
+        {
+          property: 'og:title',
+          content: this.title
+        },
+        {
+          property: 'og:description',
+          content: this.description
+        },
+        {
+          property: 'og:image',
+          content: this.imageUrl
+        }
+      ]
+    }
+  }
+}
 </script>
