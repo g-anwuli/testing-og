@@ -1,9 +1,10 @@
-
-
-
-
-HomePage 
-onMobile the account dropdown in the sidebar Doesnt close on closing the sidebar
-
-when you navigate to profile or campaign using the dropdown if you navigate back to home using the arrow icon the side bar and the dropDown still show
-( This is yet to be fix )
+tab not showing stat
+A white space showing while scrolling down the home page
+icon not showing on top and recent donation
+three dot in details restyling (probably background color)
+dropdown not clickable on tab 
+routing back from mycampaign and profile sidebar still showing
+in appreciation flow the receipt should have it own page
+the category select input on the edit has that grey background.
+edit page the after removing image can't select an image
+edit page on submitting it keep showing ensure all fields are filled whereas i fill required fields

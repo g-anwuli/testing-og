@@ -7,7 +7,7 @@ const routes = [
     name: "home",
     component: HomeView,
     meta: {
-      title:"Home Page",
+      title: "Home Page",
       metaTags: [
         {
           name: "description",
@@ -41,7 +41,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
     meta: {
-      title:"About Page",
+      title: "About Page",
       metaTags: [
         {
           name: "description",
@@ -59,10 +59,10 @@ const routes = [
           property: "og:type",
           content: "website",
         },
-        {
-          property: "og:image",
-          content: "",
-        },
+        // {
+        //   property: "og:image",
+        //   content: "",
+        // },
         {
           property: "og:url",
           content: "https://testing-og-2.netlify.app",
@@ -77,8 +77,8 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to,from, next) => {
-  const {id,title} = to.params
+router.beforeEach((to, from, next) => {
+  const { id, title } = to.params;
   const nearestWithTitle = to.matched
     .slice()
     .reverse()
@@ -88,7 +88,7 @@ router.beforeEach((to,from, next) => {
     .slice()
     .reverse()
     .find((r) => r.meta && r.meta.metaTags);
-  
+
   if (nearestWithTitle && !title) {
     document.title = nearestWithTitle.meta.title;
   } else if (title) {
@@ -106,14 +106,21 @@ router.beforeEach((to,from, next) => {
       const tag = document.createElement("meta");
 
       Object.keys(tagDef).forEach((key) => {
-        if (key ==="content" && tagDef.property === "og:title" && title) {
-          tag.setAttribute(key, title);
-          return
-        }
-        if (key ==="content" && tagDef.property === "og:image" && nearestWithMeta.name === "about") {
-          tag.setAttribute(key, `https://robohash.org/${id}?set=set2&size=500x500`);
-          return
-        }
+        // if (key === "content" && tagDef.property === "og:title" && title) {
+        //   tag.setAttribute(key, title);
+        //   return;
+        // }
+        // if (
+        //   key === "content" &&
+        //   tagDef.property === "og:image" &&
+        //   nearestWithMeta.name === "about"
+        // ) {
+        //   tag.setAttribute(
+        //     key,
+        //     `https://robohash.org/${id}?set=set2&size=500x500`
+        //   );
+        //   return;
+        // }
         tag.setAttribute(key, tagDef[key]);
       });
 

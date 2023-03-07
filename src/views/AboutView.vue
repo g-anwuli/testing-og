@@ -13,6 +13,19 @@ export default {
     pageLink() {
       return window.location.href;
     },
-  }
+  },
+  created() {
+    const tag = document.createElement("meta");
+    tag.setAttribute(
+      "property",
+      "og:image"
+    );
+    tag.setAttribute(
+      "content",
+      `../assets/logo.png`
+    );
+    tag.setAttribute("data-vue-router-controlled", "");
+    document.head.appendChild(tag)
+  },
 };
 </script>
