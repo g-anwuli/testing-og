@@ -67,6 +67,10 @@ const routes = [
           property: "og:url",
           content: "https://testing-og-2.netlify.app",
         },
+        {
+          property: "twitter:card",
+          content: "summary_large_image",
+        },
       ],
     },
   },
