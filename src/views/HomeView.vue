@@ -1,21 +1,16 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <button @click="this.count++">{{this.count}}Send Notification</button>
+    <button @click="sendNotification">{{this.count}}Send Notification</button>
   </div>
 </template>
 
 <script>
 export default {
-data(){
-return {
-count:1
-}
-}
   name: "HomeView",
   methods: {
     sendNotification() {
-        Alert('working')
+        alert('working')
         const notification = new Notification("Notification title", {
           icon: "http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png",
           body: "Hey there! You've been notified!",
