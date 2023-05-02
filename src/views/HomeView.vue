@@ -10,7 +10,6 @@ export default {
   name: "HomeView",
   methods: {
     sendNotification() {
-        alert('working')
         const notification = new Notification("Notification title", {
           icon: "http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png",
           body: "Hey there! You've been notified!",
