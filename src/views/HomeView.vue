@@ -1,12 +1,17 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <button @click="sendNotification">Send Notification</button>
+    <button @click="this.count++">{{this.count}}Send Notification</button>
   </div>
 </template>
 
 <script>
 export default {
+data(){
+return {
+count:1
+}
+}
   name: "HomeView",
   methods: {
     sendNotification() {
