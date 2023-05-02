@@ -20,12 +20,12 @@ export default {
     sendNotification() {
       new Notification("Test", {
         body: "This is a test Notification",
-        icon: "../assets/logo.png",
+        icon: "./logo.png",
       });
     },
   },
   mounted() {
-    requestPermission();
+    this.requestPermission();
   },
 };
 </script>
