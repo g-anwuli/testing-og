@@ -28,9 +28,9 @@ throw new Error('Permission not granted for Notification');
 }
 },
     async sendNotification() {
-check()
-const swRegistration = await registerServiceWorker();
-const permission = await requestNotificationPermission();
+this.check()
+const swRegistration = await this.registerServiceWorker();
+const permission = await this.requestNotificationPermission();
         swRegistration.showNotification("Notification title", {
           icon: "http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png",
           body: "Hey there! You've been notified!",
