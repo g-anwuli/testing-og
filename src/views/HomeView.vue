@@ -9,19 +9,36 @@
 export default {
   name: "HomeView",
   methods: {
-    sendNotification() {
-        const notification = new Notification("Notification title", {
+check(){
+if (!('serviceWorker' in navigator)) {
+throw new Error('No Service Worker support!')
+}
+if (!('PushManager' in window)) {
+throw new Error('No Push API Support!')
+}
+},
+async registerServiceWorker(){
+const swRegistration = await navigator.serviceWorker.register('sw.js'); //notice the file name
+return swRegistration;
+},
+async requestNotificationPermission(){
+const permission = await window.Notification.requestPermission();
+if(permission !== 'granted'){
+throw new Error('Permission not granted for Notification');
+}
+},
+    async sendNotification() {
+check()
+const swRegistration = await registerServiceWorker();
+const permission = await requestNotificationPermission();
+        swRegistration.showNotification("Notification title", {
           icon: "http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png",
           body: "Hey there! You've been notified!",
         });
-
-        notification.onclick = function () {
-          window.open("http://stackoverflow.com/a/13328397/1269037");
-        };
     },
   },
   mounted(){
-Notification.requestPermission(p=>alert(p));
+//Notification.requestPermission();
 }
 };
 </script>
