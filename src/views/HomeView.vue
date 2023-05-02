@@ -9,23 +9,21 @@
 export default {
   name: "HomeView",
   methods: {
-    requestPermission() {
-      if (!("Notification" in window)) {
-        throw new Error("Browser doesn't support Notification");
-      }
-      Notification.requestPermission().then((permission) =>
-        console.log(permission)
-      );
-    },
     sendNotification() {
-      new Notification("Test", {
-        body: "This is a test Notification",
-        icon: "./logo.png",
-      });
+      if (Notification.permission !== "granted")
+        Notification.requestPermission();
+      else {
+        var notification = new Notification("Notification title", {
+          icon: "http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png",
+          body: "Hey there! You've been notified!",
+        });
+
+        notification.onclick = function () {
+          window.open("http://stackoverflow.com/a/13328397/1269037");
+        };
+      }
+      console.log(notification);
     },
-  },
-  mounted() {
-    this.requestPermission();
   },
 };
 </script>
