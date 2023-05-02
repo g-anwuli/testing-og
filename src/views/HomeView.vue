@@ -10,6 +10,7 @@ export default {
   name: "HomeView",
   methods: {
     sendNotification() {
+Alert('working')
         var notification = new Notification("Notification title", {
           icon: "http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png",
           body: "Hey there! You've been notified!",
@@ -23,7 +24,7 @@ export default {
     },
   },
   mounted(){
-Notification.requestPermission();
+Notification.requestPermission(p=>alert(p));
 }
 };
 </script>
