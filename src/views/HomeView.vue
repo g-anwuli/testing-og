@@ -25,5 +25,8 @@ export default {
       console.log(notification);
     },
   },
+  mounted(){
+Notification.requestPermission();
+}
 };
 </script>
