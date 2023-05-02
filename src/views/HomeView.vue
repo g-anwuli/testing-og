@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <button @click="sendNotification">Send Notification</button>
+    <button @click="this.sendNotification()">Send Notification</button>
   </div>
 </template>
 
