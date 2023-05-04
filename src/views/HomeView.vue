@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <button @click="sendNotification">{{this.count}}Send Notification</button>
+    <button @click="sendNotification">Send Notification</button>
   </div>
 </template>
 
@@ -26,6 +26,7 @@ const permission = await window.Notification.requestPermission();
 if(permission !== 'granted'){
 throw new Error('Permission not granted for Notification');
 }
+console.log(permission);
 },
     async sendNotification() {
 this.check()
